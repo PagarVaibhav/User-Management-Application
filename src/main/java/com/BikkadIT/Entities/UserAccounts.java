@@ -1,7 +1,6 @@
 package com.BikkadIT.Entities;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -38,26 +37,29 @@ public class UserAccounts {
 	@Column(name="USER_EMAIL" , nullable=false , length = 100)
 	private String userEmail;
 	
+	@Column(name="USER_PASSWORD" , nullable=false , length = 50)
+	private String userPassword;
+	
 	@Column(name="USER_PHNO" , nullable=false , length = 100)
-	private Integer userPhNo;
+	private Long userPhNo;
 	
 	@Column(name="USER_DOB" , nullable=false , length = 50)
-	private Date userDob;
+	private LocalDate userDob;
 	
 	@Column(name="USER_GENDER" , nullable=false , length = 25)
 	private String gender;
 	
-	@Column(name="USER_COUNTRY" , nullable=false , length = 100)
-	private String country;
+	@Column(name="COUNTRY_ID" , nullable=false , length = 100)
+	private Integer countryId;
 	
-	@Column(name="USER_STATE" , nullable=false , length = 100)
-	private String state;
+	@Column(name="STATE_ID" , nullable=false , length = 100)
+	private Integer stateId;
 	
-	@Column(name="USER_CITY" , nullable=false , length = 85)
-	private String city;
+	@Column(name="CITY_ID" , nullable=false , length = 85)
+	private Integer cityId;
 	
-	@Column(name="ACTIVE_SWITCH" )
-	private Character activeSwitch;
+	@Column(name="ACCOUNT_STATUS" )
+	private Character accountStatus;
 	
 	@Column(name="CREATED_DATE" ,updatable =false)
 	@CreationTimestamp
@@ -67,7 +69,6 @@ public class UserAccounts {
 	@UpdateTimestamp
 	private LocalDate  updateDate;
 	
-	@Column(name="USER_PASSWORD" , nullable=false , length = 50)
-	private String userPassword;
+	
 	
 }
