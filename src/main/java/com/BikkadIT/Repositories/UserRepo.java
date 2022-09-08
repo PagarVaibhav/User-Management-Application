@@ -7,4 +7,5 @@ import com.BikkadIT.Entities.UserAccounts;
 @Repository
 public interface UserRepo extends JpaRepository<UserAccounts, Integer>{
 
+	public UserAccounts findByEmailAndPassword(String email , String password);
 }

@@ -59,7 +59,7 @@ public class UserAccounts {
 	private Integer cityId;
 	
 	@Column(name="ACCOUNT_STATUS" )
-	private Character accountStatus;
+	private String accountStatus;
 	
 	@Column(name="CREATED_DATE" ,updatable =false)
 	@CreationTimestamp
